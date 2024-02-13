@@ -187,6 +187,8 @@ func main() {
 
 	bundleIcon("download", f)
 	bundleIcon("computer", f)
+	bundleIcon("desktop-mac", f)
+	bundleIcon("desktop-windows", f)
 	bundleIcon("storage", f)
 	bundleIcon("upload", f)
 

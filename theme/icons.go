@@ -446,6 +446,16 @@ const (
 	// Since: 2.0
 	IconNameComputer fyne.ThemeIconName = "computer"
 
+	// IconNameDesktopMac is the name of theme lookup for desktop icon for mac.
+	//
+	// Since: 2.5
+	IconNameDesktopMac fyne.ThemeIconName = "desktop-mac"
+
+	// IconNameDesktopWindows is the name of theme lookup for desktop icon for windows.
+	//
+	// Since: 2.5
+	IconNameDesktopWindows fyne.ThemeIconName = "desktop-windows"
+
 	// IconNameAccount is the name of theme lookup for account icon.
 	//
 	// Since: 2.1
@@ -588,10 +598,12 @@ var (
 		IconNameVolumeMute: NewThemedResource(volumemuteIconRes),
 		IconNameVolumeUp:   NewThemedResource(volumeupIconRes),
 
-		IconNameDownload: NewThemedResource(downloadIconRes),
-		IconNameComputer: NewThemedResource(computerIconRes),
-		IconNameStorage:  NewThemedResource(storageIconRes),
-		IconNameUpload:   NewThemedResource(uploadIconRes),
+		IconNameDownload:       NewThemedResource(downloadIconRes),
+		IconNameComputer:       NewThemedResource(computerIconRes),
+		IconNameDesktopMac:     NewThemedResource(desktopmacIconRes),
+		IconNameDesktopWindows: NewThemedResource(desktopwindowsIconRes),
+		IconNameStorage:        NewThemedResource(storageIconRes),
+		IconNameUpload:         NewThemedResource(uploadIconRes),
 
 		IconNameAccount: NewThemedResource(accountIconRes),
 		IconNameLogin:   NewThemedResource(loginIconRes),
@@ -1252,6 +1264,16 @@ func VolumeUpIcon() fyne.Resource {
 // ComputerIcon returns a resource containing the standard computer icon for the current theme
 func ComputerIcon() fyne.Resource {
 	return safeIconLookup(IconNameComputer)
+}
+
+// DesktopMacIcon returns a resource containing the standard desktop icon for mac for the current theme
+func DesktopMacIcon() fyne.Resource {
+	return safeIconLookup(IconNameDesktopMac)
+}
+
+// DesktopWindowsIcon returns a resource containing the standard desktop icon for windows for the current theme
+func DesktopWindowsIcon() fyne.Resource {
+	return safeIconLookup(IconNameDesktopWindows)
 }
 
 // DownloadIcon returns a resource containing the standard download icon for the current theme
